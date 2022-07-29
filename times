@@ -1,0 +1,22 @@
+Results for the extraLargeArray
+insert 2.406205 s
+append 5.7773 ms
+
+
+Results for the LargeArray
+insert 18.2308 ms
+append 2.0818 ms
+
+Results for the mediumArray
+insert 337.5 μs
+append 329.7 μs
+
+Results for the smallArray
+insert 182.6 μs
+append 167 μs
+
+Results for the tinyArray
+insert 176.7 μs
+append 171.7 μs
+
+At first the difference in time difference between insert and append is tiny, but as each level of the array increases, the difference becomes much more drastic. When using the push function, all that the function has to do is add an element to the end of the array. But with unshift, it has to add an element and then shift all the other elements in the array one space down. Because there is that second action the function has to take, it creates a massive time difference between the functions over time. An exponential time difference to be exact.
